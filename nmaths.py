@@ -5,19 +5,21 @@ def nmaths(a,b,n,i):
 
     ###Start values where t is a temperary to swap between and s is a set of values
     t=0
-    al=[]
-    bl=[]
+    na=0
+    nb=0
     ###define rules here,
     while i >0:
-        t=(a+n*b)
-        b=2*(a+b)
+        t=(a+b)
+        b=((b+4*a)+b)
         a=t
-        al.append(a)
-        bl.append(b)
         i -= 1
-    print(al[-1])
-    print(bl[-1])
+        if i == 1:
+            na = a
+            nb = b
+
+    print(na)
+    print(nb)
     #print(bl)
-    return al[-1]/bl[-1]
+    return na/nb
 
 print(nmaths(1,1,2,30))
