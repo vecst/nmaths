@@ -6,9 +6,7 @@ def nmaths(a,b,n,i):
     t=0
     #define rules here,
     while i >1:
-        t=(a+n*b)
-        b=a+b
-        a=t
+        a, b = a+n*b, a+b
         i -= 1
     print(n**(1/2))
     print(a)
