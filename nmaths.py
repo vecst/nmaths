@@ -2,24 +2,17 @@
 ##you may find other valuable numbers lets play
 ##a/b where n is the root you are looking for and i is the number of iterations
 def nmaths(a,b,n,i):
-
     ###Start values where t is a temperary to swap between and s is a set of values
     t=0
-    na=0
-    nb=0
-    ###define rules here,
-    while i >0:
-        t=(a+b)
-        b=((b+4*a)+b)
+    #define rules here,
+    while i >1:
+        t=(a+n*b)
+        b=a+b
         a=t
         i -= 1
-        if i == 1:
-            na = a
-            nb = b
+    print(n**(1/2))
+    print(a)
+    print(b)
+    return a/b
 
-    print(na)
-    print(nb)
-    #print(bl)
-    return na/nb
-
-print(nmaths(1,1,2,30))
+print(nmaths(84,84,169,300))
